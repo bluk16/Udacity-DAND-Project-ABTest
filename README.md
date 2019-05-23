@@ -200,7 +200,8 @@ i. Plot a histogram of the **p_diffs**.  Does this plot look like what you expec
 plt.hist(p_diffs);
 plt.axvline(obs_diff,color='r');
 ```
-# image d!!!
+[logo]: (/d.PNG)
+
 ```python
 obs_diff # -0.0015782389853555567
 ```
