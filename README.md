@@ -200,7 +200,7 @@ i. Plot a histogram of the **p_diffs**.  Does this plot look like what you expec
 plt.hist(p_diffs);
 plt.axvline(obs_diff,color='r');
 ```
-[logo]: (/d.PNG)
+![chart](d.png)
 
 ```python
 obs_diff # -0.0015782389853555567
@@ -260,7 +260,7 @@ c. Use **statsmodels** to instantiate your regression model on the two columns y
 lm = sm.Logit(df2['converted'],df2[['intercept','ab_page']]).fit().summary()
 ```
 
-# image a!!!
+![chart](a.png)
 
 e. What is the p-value associated with **ab_page**? Why does it differ from the value you found in **Part II**?<br><br>  **Hint**: What are the null and alternative hypotheses associated with your regression model, and how do they compare to the null and alternative hypotheses in the **Part II**?"
 
@@ -287,7 +287,7 @@ lm_with_country = sm.Logit(df2['converted'],df2[['intercept','UK','US']]).fit()
 print(lm_with_country.summary())
 ```
 
-# image b!!!
+![chart](b.png)
 
 According to the summary, it appears that both counties have p-values above an $\alpha$ level of 0.05 and therefore there is no statistical evidence that on country's impact on the conversion rate.
 
@@ -303,6 +303,6 @@ lm_with_country_and_page = sm.Logit(df2['converted'],df2[['intercept','UK_page',
 print(lm_with_country_and_page.summary())
 ```
 
-#image c!!!
+![chart](c.png)
 
 After adding the ab_page factor, it appears that the p-value is now less than the $\alpha$ level of 0.05, as a result, we will now reject the null hypothesis and that this is statistical significant in the conversion rate difference of the `ab_page`.
